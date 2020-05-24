@@ -1,0 +1,40 @@
+header {
+    width: 100%;
+    height: 50px;
+    background-color: $color-principal;
+  
+    .header-icons-container {
+      position: fixed;
+      left: 0;
+      top:250px;
+      z-index:2000;
+  
+      ul{
+        list-style: none;
+        
+        li{
+          .icon-instagram {background:#E1306C;}
+          .icon-google-plus {background:#d95232;}
+          .icon-twitter {background:#00abf0;}
+          .icon-facebook {background: #3b5998;}   
+          .icon-linkedin {background:#0e76a8;}
+  
+          a{
+            display: inline-block;
+            color: $color-claro;
+            background-color:#000000;
+            padding: 10px 15px;
+            text-decoration: none;
+  
+            -webkit-transition: all 500ms ease;
+            -o-transition: all 500ms ease;
+            transition: all 500ms ease;
+          }
+          a:hover{
+            padding: 10px 30px;
+            background: black;
+          }
+        }
+      }
+    }
+  }
