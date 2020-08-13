@@ -2,13 +2,15 @@
 * {
   padding: 0;
   margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 header {
   width: 100%;
   height: 50px;
-  background-color: #045FB4;
+  background-color: #045fb4;
 }
 header .header-icons-container {
   position: fixed;
@@ -20,7 +22,7 @@ header .header-icons-container ul {
   list-style: none;
 }
 header .header-icons-container ul li .icon-instagram {
-  background: #E1306C;
+  background: #e1306c;
 }
 header .header-icons-container ul li .icon-google-plus {
   background: #d95232;
@@ -40,6 +42,8 @@ header .header-icons-container ul li a {
   background-color: #000000;
   padding: 10px 15px;
   text-decoration: none;
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
   transition: all 500ms ease;
 }
 header .header-icons-container ul li a:hover {
@@ -50,12 +54,40 @@ header .header-icons-container ul li a:hover {
 .main-container .below-header {
   width: 95%;
   height: 100px;
-  margin: 0px auto;
+  margin: auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 200px auto auto;
 }
 .main-container .below-header .logo-container img {
-  width: 50%;
+  width: 100%;
+  height: auto;
+}
+.main-container .below-header .logo-container img:hover {
+  animation: scalar 2s linear 200ms 1 normal forwards;
+}
+@keyframes scalar {
+  0% {
+    transform: rotateZ(0deg);
+    transform: scale(0.9);
+  }
+  25% {
+    transform: rotateZ(90deg);
+  }
+  50% {
+    transform: rotateZ(180deg);
+  }
+  75% {
+    transform: rotateZ(270deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+    transform: scale(0.8);
+  }
+}
+.main-container .below-header .logo-containerUno img {
+  align-self: start;
+  width: 40%;
+  height: auto;
 }
 .main-container .below-header .sobre-mi {
   font-size: 20px;
@@ -114,7 +146,7 @@ header .header-icons-container ul li a:hover {
   padding: 15px 20px;
   margin: 20px 0;
   background-color: none;
-  border: 2px solid #045FB4;
+  border: 2px solid #045fb4;
   font-family: "Roboto Condensed", "sans-serif";
   cursor: pointer;
 }
@@ -176,14 +208,16 @@ header .header-icons-container ul li a:hover {
   padding: 10px 20px;
   margin: 20px 0;
   background-color: none;
-  border: 2px solid #045FB4;
+  border: 2px solid #045fb4;
   font-family: "Roboto Condensed", "sans-serif";
   cursor: pointer;
 }
 .last-post-grid div a:hover {
-  background-color: #045FB4;
+  background-color: #045fb4;
   font-weight: 500;
   color: white;
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
   transition: all 500ms ease;
 }
 
@@ -196,7 +230,7 @@ footer {
   background-color: black;
 }
 footer .color-footer-part {
-  background-color: #045FB4;
+  background-color: #045fb4;
   height: 30%;
   width: 100%;
 }
@@ -211,3 +245,5 @@ footer .info-footer-part h2 {
   font-size: 25px;
   color: white;
 }
+
+/*# sourceMappingURL=blogs.css.map */

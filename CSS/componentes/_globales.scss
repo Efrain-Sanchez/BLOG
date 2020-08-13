@@ -1,22 +1,22 @@
-$color-principal: #045FB4;
+$color-principal: #045fb4;
 $color-claro: white;
 $basic-font: 20px;
 $principal-h: 50px;
 $secundario-h: 30px;
 $weight: 400;
-$font-family-h: 'Roboto Condensed', 'sans-serif';
-$background-color:#ccd1d9;
+$font-family-h: "Roboto Condensed", "sans-serif";
+$background-color: #ccd1d9;
 * {
-    padding: 0;
-    margin: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-body{
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
 }

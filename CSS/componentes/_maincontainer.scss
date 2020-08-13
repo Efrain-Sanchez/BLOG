@@ -1,78 +1,113 @@
-.main-container{
-    background: rgba(0, 0, 0, 0.1);
-    background-image: url('../IMG/background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-  
-    .below-header{
-      width: 95%;
-      height: 100px;
-      margin: 0px auto;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      
-      .logo-container img{
-        width: 50%;
-      }
-      .sobre-mi{
-        font-size: $basic-font;
-        font-family: $font-family-h;
-        margin-right: 40px;
-        text-align: end;
-        align-self: center;
-  
-        a{
-          color: $color-claro;
-          text-decoration: underline;
-        }
-        a:hover{font-size: $basic-font +5; color: #e4e4e4e4;}
-      }
-    }
-    .button-text{
-        width: 50%;
-        height: 50%;
-        position: absolute;
-        top: 35%;
-        right: 25%;
-        display: grid;
-        grid-template-rows: repeat(2, 1fr);
-        justify-content: center;
-        align-items: center;
-        
-        p{
-          text-align: center;
-          letter-spacing: 10px;
-          color: $color-claro;
-          font-size: $principal-h;
-          font-family: $font-family-h;
-          font-weight: $weight;
-        }
-       
-        button{
-          background-color: $color-principal;
-          border: $color-principal;
-          padding: 10px;
-          width: 25%;
-          height: 50px;
-          margin: auto;
-    
-          a{
-            text-decoration: none;
-            color: $color-claro;
-            font-family: $font-family-h;
-            font-size: $basic-font ;
-            font-weight: $weight;
-          }
-        }
-        button:hover{
-          width: 30%;
-          border: 1px solid rgb(4, 95 , 200, .2);
-          background: black;
-          -webkit-transition: all 500ms ease;
-          -o-transition: all 500ms ease;
-          transition: all 500ms ease;
-        }
-      }
-    }
+.main-container {
+	background: rgba(0, 0, 0, 0.1);
+	background-image: url("../IMG/background.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+
+	.below-header {
+		width: 95%;
+		height: 100px;
+		margin: 0px auto;
+		display: grid;
+		align-items: center;
+		// justify-content: center;
+		grid-template-columns: 200px auto auto;
+
+		.logo-container img {
+			width: 100%;
+			height: auto;
+			&:hover {
+				animation: scalar 2s linear 200ms 1 normal forwards;
+				// animation: scalar 2s ease 200ms 1 alternate forwards;
+
+				@keyframes scalar {
+					0% {
+						transform: rotateZ(0deg);
+						transform: scale(0.9);
+					}
+					25% {
+						transform: rotateZ(90deg);
+					}
+					50% {
+						transform: rotateZ(180deg);
+					}
+					75% {
+						transform: rotateZ(270deg);
+					}
+					100% {
+						transform: rotateZ(360deg);
+						transform: scale(0.8);
+					}
+				}
+			}
+		}
+		.logo-containerUno img {
+			align-self: start;
+			width: 40%;
+			height: auto;
+		}
+		.sobre-mi {
+			font-size: $basic-font + 10;
+			font-family: $font-family-h;
+			margin-right: 40px;
+			text-align: center;
+			align-self: center;
+
+			a {
+				color: $color-claro;
+				text-decoration: underline;
+			}
+			a:hover {
+				font-size: $basic-font + 5;
+				color: #e4e4e4e4;
+			}
+		}
+	}
+	.button-text {
+		width: 50%;
+		height: 50%;
+		position: absolute;
+		top: 35%;
+		right: 25%;
+		display: grid;
+		grid-template-rows: repeat(2, 1fr);
+		justify-content: center;
+		align-items: center;
+
+		p {
+			text-align: center;
+			letter-spacing: 10px;
+			color: $color-claro;
+			font-size: $principal-h + 10;
+			font-family: $font-family-h;
+			font-weight: bold;
+		}
+
+		button {
+			background-color: $color-principal;
+			border: $color-principal;
+			padding: 10px;
+			width: 25%;
+			height: 50px;
+			margin: auto;
+
+			a {
+				text-decoration: none;
+				color: $color-claro;
+				font-family: $font-family-h;
+				font-size: $basic-font;
+				font-weight: $weight;
+			}
+		}
+		button:hover {
+			width: 30%;
+			border: 1px solid rgb(4, 95, 200, 0.2);
+			background: black;
+			-webkit-transition: all 500ms ease;
+			-o-transition: all 500ms ease;
+			transition: all 500ms ease;
+		}
+	}
+}

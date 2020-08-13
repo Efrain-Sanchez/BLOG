@@ -1,26 +1,59 @@
-.main-container{
-    .below-header{
-        width: 95%;
-        height: 100px;
-        margin: 0px auto;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        
-        .logo-container img{
-        width: 50%;
-        }
-        .sobre-mi{
-        font-size: $basic-font;
-        font-family: $font-family-h;
-        margin-right: 40px;
-        text-align: end;
-        align-self: center;
+.main-container {
+	.below-header {
+		width: 95%;
+		height: 100px;
+		margin: auto;
+		display: grid;
+		grid-template-columns: 200px auto auto;
 
-        a{
-            color: black;
-            text-decoration: underline;
-        }
-        a:hover{font-size: $basic-font +5; color: #e4e4e4e4;}
-        }
-    }
+		.logo-container img {
+			width: 100%;
+			height: auto;
+			&:hover {
+				animation: scalar 2s linear 200ms 1 normal forwards;
+				// animation: scalar 2s ease 200ms 1 alternate forwards;
+
+				@keyframes scalar {
+					0% {
+						transform: rotateZ(0deg);
+						transform: scale(0.9);
+					}
+					25% {
+						transform: rotateZ(90deg);
+					}
+					50% {
+						transform: rotateZ(180deg);
+					}
+					75% {
+						transform: rotateZ(270deg);
+					}
+					100% {
+						transform: rotateZ(360deg);
+						transform: scale(0.8);
+					}
+				}
+			}
+		}
+		.logo-containerUno img {
+			align-self: start;
+			width: 40%;
+			height: auto;
+		}
+		.sobre-mi {
+			font-size: $basic-font;
+			font-family: $font-family-h;
+			margin-right: 40px;
+			text-align: end;
+			align-self: center;
+
+			a {
+				color: black;
+				text-decoration: underline;
+			}
+			a:hover {
+				font-size: $basic-font + 5;
+				color: #e4e4e4e4;
+			}
+		}
+	}
 }
